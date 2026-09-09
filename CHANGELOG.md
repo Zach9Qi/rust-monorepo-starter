@@ -15,4 +15,4 @@
 
 - 基于 rust-monorepo-starter 模板初始化项目
 
-[Unreleased]: https://github.com/your-name/rust-monorepo-starter/commits/main
+[Unreleased]: https://github.com/Zach9Qi/rust-monorepo-starter/commits/main

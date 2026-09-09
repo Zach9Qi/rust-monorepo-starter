@@ -12,9 +12,9 @@ members = ["crates/*", "xtask"]
 # 【新项目必改】版本号只在这里维护一处,`cargo xtask release` 负责递增并刷新 Cargo.lock
 version = "0.1.0"
 # 【新项目必改】改成你的名字或邮箱
-authors = ["you"]
+authors = ["Zach9Qi"]
 # 【新项目必改】仓库地址,会写进每个 crate 的元数据
-repository = "https://github.com/your-name/rust-monorepo-starter"
+repository = "https://github.com/Zach9Qi/rust-monorepo-starter"
 license = "MIT"
 edition = "2024"
 # edition 2024 自 1.85 起稳定;低于此版本 cargo 会直接拒绝编译
