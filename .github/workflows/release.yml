@@ -32,7 +32,7 @@ jobs:
       has_bin: ${{ steps.config.outputs.has_bin }}
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 读取发布配置
         id: config
@@ -64,7 +64,7 @@ jobs:
         run: cargo xtask changelog notes "$GITHUB_REF_NAME" > release-notes.md
 
       - name: 上传 Release 说明
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: release-notes
           path: release-notes.md
@@ -105,7 +105,7 @@ jobs:
         shell: bash
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 安装 Rust 工具链(stable,含目标平台)
         uses: dtolnay/rust-toolchain@stable
@@ -165,7 +165,7 @@ jobs:
           echo "asset=${asset}" >> "$GITHUB_OUTPUT"
 
       - name: 上传产物 artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: release-${{ matrix.target }}
           if-no-files-found: error
@@ -194,7 +194,7 @@ jobs:
       id-token: write
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 安装 Rust 工具链(stable)
         uses: dtolnay/rust-toolchain@stable
@@ -220,13 +220,13 @@ jobs:
       contents: write
     steps:
       - name: 下载 Release 说明
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: release-notes
 
       - name: 下载全部二进制产物(若有)
         if: needs.build.result == 'success'
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: release
           pattern: release-*
