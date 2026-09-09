@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: typos
         uses: crate-ci/typos@v1.50.1
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 安装 Rust 工具链(stable,含 rustfmt)
         uses: dtolnay/rust-toolchain@stable
@@ -78,7 +78,7 @@ jobs:
         shell: bash
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 安装 Rust 工具链(stable,含 clippy)
         uses: dtolnay/rust-toolchain@stable
@@ -101,7 +101,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # 从根 Cargo.toml 读 rust-version,不在 workflow 里重复写一份
       - name: 读取 rust-version
@@ -132,7 +132,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: 安装 Rust 工具链(stable)
         uses: dtolnay/rust-toolchain@stable
@@ -149,7 +149,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: cargo-deny 检查
         uses: EmbarkStudios/cargo-deny-action@v2
