@@ -19,3 +19,6 @@
 logs
 *.log
 *.tmp
+
+# Trellis 个人工作区(开发者日志、会话记录)只在本机保留;克隆模板后各自 `python ./.trellis/scripts/init_developer.py <name>` 生成
+.trellis/workspace/
