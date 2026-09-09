@@ -561,7 +561,7 @@ mod tests {
         assert!(parse("0.2.0") < parse("1.0.0"));
         assert!(parse("1.0.0-beta.1") < parse("1.0.0"));
         assert!(parse("1.0.0-alpha") < parse("1.0.0-beta"));
-        assert!(parse("1.0.0") == parse("1.0.0"));
+        assert_eq!(parse("1.0.0"), parse("1.0.0"));
     }
 
     #[test]
